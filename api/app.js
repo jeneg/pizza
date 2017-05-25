@@ -8,7 +8,7 @@ const logger = require('koa-logger');
 const mongoose = require('mongoose');
 
 const index = require('./routes/index');
-const users = require('./routes/users');
+// const users = require('./routes/users');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -17,7 +17,7 @@ onerror(app);
 
 // middlewares
 app.use(bodyparser({
-  enableTypes:['json', 'form', 'text']
+  enableTypes: ['json', 'form', 'text']
 }));
 app.use(json());
 app.use(logger());
@@ -36,15 +36,19 @@ app.use(async (ctx, next) => {
 });
 
 if (isProduction) {
-    mongoose.connect(process.env.MONGODB_URI);
+  mongoose.connect(process.env.MONGODB_URI);
 } else {
-    mongoose.connect('mongodb://localhost/pizza');
-    mongoose.set('debug', true);
+  mongoose.connect('mongodb://localhost/pizza');
+  mongoose.set('debug', true);
 }
+
+require('./models');
+require('./config/passport');
 
 
 // routes
 app.use(index.routes(), index.allowedMethods());
-app.use(users.routes(), users.allowedMethods());
+// app.use(users.routes(), users.allowedMethods());
+
 
 module.exports = app;
