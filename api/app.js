@@ -7,7 +7,7 @@ const bodyparser = require('koa-bodyparser');
 const logger = require('koa-logger');
 const mongoose = require('mongoose');
 
-const index = require('./routes/index');
+// const index = require('./routes/index');
 // const users = require('./routes/users');
 
 const isProduction = process.env.NODE_ENV === 'production';
@@ -44,6 +44,9 @@ if (isProduction) {
 
 require('./models');
 require('./config/passport');
+
+const index = require('./routes/index');
+
 
 
 // routes
