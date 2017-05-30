@@ -4,29 +4,23 @@ const User = mongoose.model('User');
 
 
 module.exports.createUser = createUser;
+module.exports.getUser = getUser;
 
 async function createUser(ctx, next) {
   let user = new User();
-
-  // console.log(ctx.request.body);
-  // return;
 
   user.username = ctx.request.body.username;
   user.email = ctx.request.body.email;
   user.setPassword(ctx.request.body.password);
 
-  try {
-    ctx.body = await user.save();
-  } catch (e) {
-    ctx.body = e;
+  let data = await user.save();
+  ctx.body = {user: data.toAuthJSON()};
+}
 
-    // todo
+async function getUser(ctx, next){
+  ctx.body = await User.findById(ctx.state.user.id).then(function(user){
+    if(!user){ return ctx.throw(404); }
 
-    console.log('err', e)
-  }
-  /*.then(function () {
-  cl
-    return ctx.body = {user: user.toAuthJSON()};
-  }).catch(next);*/
-  console.log(prom)
+    return {user: user.toProfileJSON()};
+  }).catch(next);
 }

@@ -1,5 +1,6 @@
 const router = require('koa-router')();
 const usersController = require('../../controllers/users');
+const auth = require('../auth');
 
 router.prefix('/users');
 
@@ -11,6 +12,7 @@ router.prefix('/users');
 //   ctx.body = 'this is a users/bar response'
 // });
 
+router.get('/:id', auth.required, usersController.getUser);
 router.post('/', usersController.createUser);
 
 module.exports = router;

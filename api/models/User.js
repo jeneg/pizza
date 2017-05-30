@@ -21,7 +21,6 @@ let UserSchema = new mongoose.Schema({
     match: [/\S+@\S+\.\S+/, 'is invalid'],
     index: true
   },
-  bio: String,
   image: String,
   hash: String,
   salt: String
@@ -59,10 +58,10 @@ UserSchema.methods.toAuthJSON = function () {
   };
 };
 
-UserSchema.methods.toProfileJSONFor = function () {
+UserSchema.methods.toProfileJSON = function () {
   return {
     username: this.username,
-    bio: this.bio,
+    email: this.email,
     image: this.image || 'https://static.productionready.io/images/smiley-cyrus.jpg',
   };
 };

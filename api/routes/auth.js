@@ -1,9 +1,9 @@
-const jwt = require('express-jwt');
+const jwt = require('koa-jwt');
 const secret = require('../config').secret;
 
-function getTokenFromHeader(req){
+function getTokenFromHeader(req) {
   if (req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Token' ||
-      req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer') {
+    req.headers.authorization && req.headers.authorization.split(' ')[0] === 'Bearer') {
     return req.headers.authorization.split(' ')[1];
   }
 
@@ -13,8 +13,9 @@ function getTokenFromHeader(req){
 const auth = {
   required: jwt({
     secret: secret,
-    userProperty: 'payload',
-    getToken: getTokenFromHeader
+    // userProperty: 'payload',
+    getToken: getTokenFromHeader,
+    // key: 'jwt'
   }),
   optional: jwt({
     secret: secret,
