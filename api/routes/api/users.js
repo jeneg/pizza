@@ -12,7 +12,7 @@ router.prefix('/users');
 //   ctx.body = 'this is a users/bar response'
 // });
 
-router.get('/:id', auth.required, usersController.getUser);
+router.get('/', auth.required, usersController.getUser);
 router.post('/', usersController.createUser);
 
 module.exports = router;

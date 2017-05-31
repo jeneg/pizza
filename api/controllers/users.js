@@ -11,7 +11,7 @@ async function createUser(ctx, next) {
 
   user.username = ctx.request.body.username;
   user.email = ctx.request.body.email;
-  user.setPassword(ctx.request.body.password);
+  user.password = ctx.request.body.password;
 
   let data = await user.save();
   ctx.body = {user: data.toAuthJSON()};
