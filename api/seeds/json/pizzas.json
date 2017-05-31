@@ -1,0 +1,998 @@
+[
+  {
+    "name": "Margarita",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2016/03/02/margo_%D1%81%D0%BC.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 370,
+        "price": 7698.999999999999
+      },
+      {
+        "name": "30 cm",
+        "weight": 655,
+        "price": 12799
+      },
+      {
+        "name": "36 cm",
+        "weight": 900,
+        "price": 15799
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 15297.999999999998
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 19298
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 380,
+        "price": 13499
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 570,
+        "price": 15799
+      }
+    ]
+  },
+  {
+    "name": "Pepperoni with tomatoes",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2014/10/02/%D0%BF%D0%B5%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D0%B8_%D0%BF%D0%BE%D0%BC%D0%B8%D0%B4%D0%BE%D1%80%D1%8B_%D0%BC%D0%B0%D0%BB.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 370,
+        "price": 7698.999999999999
+      },
+      {
+        "name": "30 cm",
+        "weight": 655,
+        "price": 12799
+      },
+      {
+        "name": "36 cm",
+        "weight": 900,
+        "price": 15799
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 15297.999999999998
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 19298
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 380,
+        "price": 13499
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 570,
+        "price": 15799
+      }
+    ]
+  },
+  {
+    "name": "Pizza Boston",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2016/11/01/bst_sml.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 396,
+        "price": 7698.999999999999
+      },
+      {
+        "name": "30 cm",
+        "weight": 705,
+        "price": 12799
+      },
+      {
+        "name": "36 cm",
+        "weight": 1000,
+        "price": 15799
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 15297.999999999998
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 19298
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 450,
+        "price": 13499
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 655,
+        "price": 15799
+      }
+    ]
+  },
+  {
+    "name": "Pizza Texas",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2013/12/27/%D1%82%D0%B5%D1%85%D0%B0%D1%81.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 370,
+        "price": 7698.999999999999
+      },
+      {
+        "name": "30 cm",
+        "weight": 655,
+        "price": 12799
+      },
+      {
+        "name": "36 cm",
+        "weight": 900,
+        "price": 15799
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 15297.999999999998
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 19298
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 380,
+        "price": 13499
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 570,
+        "price": 15799
+      }
+    ]
+  },
+  {
+    "name": "Pizza BBQ",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2013/12/27/%D0%B1%D0%B0%D1%80%D0%B1%D0%B5%D0%BA%D1%8E.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 385,
+        "price": 9299
+      },
+      {
+        "name": "30 cm",
+        "weight": 660,
+        "price": 14299
+      },
+      {
+        "name": "36 cm",
+        "weight": 900,
+        "price": 18499
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 16798
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 21998
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 385,
+        "price": 15399
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 570,
+        "price": 19499
+      }
+    ]
+  },
+  {
+    "name": "Pizza Hawaiian",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2015/03/25/hawaii_small_4iNWmiU.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 385,
+        "price": 9299
+      },
+      {
+        "name": "30 cm",
+        "weight": 660,
+        "price": 14299
+      },
+      {
+        "name": "36 cm",
+        "weight": 900,
+        "price": 18499
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 16798
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 21998
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 385,
+        "price": 15399
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 570,
+        "price": 19499
+      }
+    ]
+  },
+  {
+    "name": "Pizza Tony Pepperoni",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2013/12/27/%D1%82_%D0%BF%D0%B5%D0%BF%D0%BF%D0%B5%D1%80%D0%BE%D0%BD%D0%B8.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 385,
+        "price": 9299
+      },
+      {
+        "name": "30 cm",
+        "weight": 660,
+        "price": 14299
+      },
+      {
+        "name": "36 cm",
+        "weight": 900,
+        "price": 18499
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 16798
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 21998
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 385,
+        "price": 15399
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 570,
+        "price": 19499
+      }
+    ]
+  },
+  {
+    "name": "Pizza Carbonara",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2014/10/02/%D0%BA%D0%B0%D1%80%D0%B1%D0%BE%D0%BD%D0%B0%D1%80%D0%B0_%D0%BC%D0%B0%D0%BB.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 370,
+        "price": 10899
+      },
+      {
+        "name": "30 cm",
+        "weight": 625,
+        "price": 16299
+      },
+      {
+        "name": "36 cm",
+        "weight": 840,
+        "price": 19999
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 18798
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 23498
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 345,
+        "price": 17499
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 510,
+        "price": 19999
+      }
+    ]
+  },
+  {
+    "name": "Pizza Bavarian",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2015/02/20/bav_%D1%81%D0%BC.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 370,
+        "price": 10899
+      },
+      {
+        "name": "30 cm",
+        "weight": 625,
+        "price": 16299
+      },
+      {
+        "name": "36 cm",
+        "weight": 840,
+        "price": 19999
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 18798
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 23498
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 345,
+        "price": 17499
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 510,
+        "price": 19999
+      }
+    ]
+  },
+  {
+    "name": "Pizza Veggie Feast",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2014/10/02/%D0%BE%D0%B2%D0%BE%D1%87%D0%BD%D0%B0%D1%8F_%D1%84%D0%B5%D0%B5%D1%80%D0%B8%D1%8F_%D0%BC%D0%B0%D0%BB.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 370,
+        "price": 10899
+      },
+      {
+        "name": "30 cm",
+        "weight": 625,
+        "price": 16299
+      },
+      {
+        "name": "36 cm",
+        "weight": 840,
+        "price": 19999
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 18798
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 23498
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 345,
+        "price": 17499
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 510,
+        "price": 19999
+      }
+    ]
+  },
+  {
+    "name": "Pizza Country",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2013/12/27/%D0%BA%D0%B0%D0%BD%D1%82%D1%80%D0%B8.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 370,
+        "price": 10899
+      },
+      {
+        "name": "30 cm",
+        "weight": 625,
+        "price": 16299
+      },
+      {
+        "name": "36 cm",
+        "weight": 840,
+        "price": 19999
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 18798
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 23498
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 345,
+        "price": 17499
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 510,
+        "price": 19999
+      }
+    ]
+  },
+  {
+    "name": "Pizza PaparaZZi",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2014/10/02/%D0%BF%D0%B0%D0%BF%D0%B0%D1%80%D0%B0%D1%86%D1%86%D0%B8_%D0%BC%D0%B0%D0%BB.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 370,
+        "price": 10899
+      },
+      {
+        "name": "30 cm",
+        "weight": 625,
+        "price": 16299
+      },
+      {
+        "name": "36 cm",
+        "weight": 840,
+        "price": 19999
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 18798
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 23498
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 345,
+        "price": 17499
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 510,
+        "price": 19999
+      }
+    ]
+  },
+  {
+    "name": "Pizza Provence",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2014/10/02/%D0%BF%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D1%81_%D0%BC%D0%B0%D0%BB.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 370,
+        "price": 10899
+      },
+      {
+        "name": "30 cm",
+        "weight": 625,
+        "price": 16299
+      },
+      {
+        "name": "36 cm",
+        "weight": 840,
+        "price": 19999
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 18798
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 23498
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 345,
+        "price": 17499
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 510,
+        "price": 19999
+      }
+    ]
+  },
+  {
+    "name": "Pizza BBQ Delux",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2013/12/27/%D0%B1%D0%B0%D1%80%D0%B1%D0%B5%D0%BA%D1%8E_%D0%B4%D0%B5%D0%BB%D1%8E%D0%BA%D1%81.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 380,
+        "price": 13499
+      },
+      {
+        "name": "30 cm",
+        "weight": 665,
+        "price": 17799
+      },
+      {
+        "name": "36 cm",
+        "weight": 900,
+        "price": 21499
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 20298
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 24998
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 400,
+        "price": 18999
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 550,
+        "price": 22499
+      }
+    ]
+  },
+  {
+    "name": "Pizza Americana",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2013/12/27/%D0%B0%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0%D0%BD%D0%B0.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 380,
+        "price": 13499
+      },
+      {
+        "name": "30 cm",
+        "weight": 665,
+        "price": 17799
+      },
+      {
+        "name": "36 cm",
+        "weight": 900,
+        "price": 21499
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 20298
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 24998
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 400,
+        "price": 18999
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 550,
+        "price": 22499
+      }
+    ]
+  },
+  {
+    "name": "Pizza Spicy",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2017/02/20/spicy_1.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 380,
+        "price": 13499
+      },
+      {
+        "name": "30 cm",
+        "weight": 665,
+        "price": 17799
+      },
+      {
+        "name": "36 cm",
+        "weight": 900,
+        "price": 21499
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 20298
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 24998
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 400,
+        "price": 18999
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 550,
+        "price": 22499
+      }
+    ]
+  },
+  {
+    "name": "Pizza Munich DeLUX",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2015/04/30/%D0%BC%D1%8E%D0%BD%D1%85_%D0%BC%D0%B0%D0%BB.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 380,
+        "price": 13499
+      },
+      {
+        "name": "30 cm",
+        "weight": 665,
+        "price": 17799
+      },
+      {
+        "name": "36 cm",
+        "weight": 900,
+        "price": 21499
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 20298
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 24998
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 400,
+        "price": 18999
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 550,
+        "price": 22499
+      }
+    ]
+  },
+  {
+    "name": "Pizza Tuna",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2016/09/21/%D1%82%D1%83%D0%BD%D0%B5%D1%86_small.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 400,
+        "price": 13499
+      },
+      {
+        "name": "30 cm",
+        "weight": 655,
+        "price": 17799
+      },
+      {
+        "name": "36 cm",
+        "weight": 830,
+        "price": 21499
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 20298
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 24998
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 370,
+        "price": 18999
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 560,
+        "price": 22499
+      }
+    ]
+  },
+  {
+    "name": "Pizza Toscana",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2016/06/17/toskana_api.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 400,
+        "price": 13499
+      },
+      {
+        "name": "30 cm",
+        "weight": 655,
+        "price": 17799
+      },
+      {
+        "name": "36 cm",
+        "weight": 830,
+        "price": 21499
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 20298
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 24998
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 370,
+        "price": 18999
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 560,
+        "price": 22499
+      }
+    ]
+  },
+  {
+    "name": "Pizza MitZZa",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2015/02/20/mitz_%D1%81%D0%BC.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 400,
+        "price": 13999
+      },
+      {
+        "name": "30 cm",
+        "weight": 655,
+        "price": 20499
+      },
+      {
+        "name": "36 cm",
+        "weight": 830,
+        "price": 23999
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 22998
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 27498
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 370,
+        "price": 20999
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 560,
+        "price": 23999
+      }
+    ]
+  },
+  {
+    "name": "Pizza ExtravaganZZa",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2014/10/02/%D1%8D%D0%BA%D1%81%D1%82%D1%80%D0%B0%D0%B2%D0%B0%D0%B3%D0%B0%D0%BD%D0%B7%D0%B0_%D0%BC%D0%B0%D0%BB.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 400,
+        "price": 13999
+      },
+      {
+        "name": "30 cm",
+        "weight": 655,
+        "price": 20499
+      },
+      {
+        "name": "36 cm",
+        "weight": 830,
+        "price": 23999
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 22998
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 27498
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 370,
+        "price": 20999
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 560,
+        "price": 23999
+      }
+    ]
+  },
+  {
+    "name": "Pizza Spinach and Feta",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2014/10/02/%D1%88%D0%BF%D0%B8%D0%BD%D0%B0%D1%82_%D0%B8_%D1%84%D0%B5%D1%82%D0%B0_%D0%BC%D0%B0%D0%BB.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 400,
+        "price": 13999
+      },
+      {
+        "name": "30 cm",
+        "weight": 655,
+        "price": 20499
+      },
+      {
+        "name": "36 cm",
+        "weight": 830,
+        "price": 23999
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 22998
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 27498
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 370,
+        "price": 20999
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 560,
+        "price": 23999
+      }
+    ]
+  },
+  {
+    "name": "Pizza Five Cheeses",
+    "images": [
+      "https://d2nznsm87rjw1k.cloudfront.net/media/dominos/osg/small/2014/10/02/5%D1%81%D1%8B%D1%80%D0%BE%D0%B2_%D0%BC%D0%B0%D0%BB.png"
+    ],
+    "sizes": [
+      {
+        "name": "22 cm",
+        "weight": 400,
+        "price": 13999
+      },
+      {
+        "name": "30 cm",
+        "weight": 655,
+        "price": 20499
+      },
+      {
+        "name": "36 cm",
+        "weight": 830,
+        "price": 23999
+      },
+      {
+        "name": "PHIL 30 cm",
+        "weight": null,
+        "price": 22998
+      },
+      {
+        "name": "PHIL 36 cm",
+        "weight": null,
+        "price": 27498
+      },
+      {
+        "name": "ITAL 30 cm",
+        "weight": 370,
+        "price": 20999
+      },
+      {
+        "name": "ITAL 36 cm",
+        "weight": 560,
+        "price": 23999
+      }
+    ]
+  },
+  {
+    "name": "Create your own pizza",
+    "images": [
+      ""
+    ],
+    "sizes": []
+  }
+]

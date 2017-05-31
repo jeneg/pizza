@@ -9,7 +9,7 @@ module.exports.login = login;
 async function createUser(ctx, next) {
   let user = new User();
 
-  user.username = ctx.request.body.username;
+  user.name = ctx.request.body.name;
   user.email = ctx.request.body.email;
   user.password = ctx.request.body.password;
 
