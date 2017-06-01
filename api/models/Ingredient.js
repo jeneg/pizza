@@ -13,4 +13,11 @@ let IngredientSchema = new mongoose.Schema({
 
 IngredientSchema.plugin(uniqueValidator, {message: 'already exist'});
 
+IngredientSchema.methods.toJSON = function(){
+  return {
+    name: this.name,
+    img: this.img
+  };
+};
+
 mongoose.model('Ingredient', IngredientSchema);

@@ -1164,13 +1164,5 @@
       "Mozzarella",
       "Alfredo sauce"
     ]
-  },
-  {
-    "name": "Create your own pizza",
-    "images": [
-      ""
-    ],
-    "sizes": [],
-    "ingredients": null
   }
 ]

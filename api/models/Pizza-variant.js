@@ -8,8 +8,18 @@ let PizzaVariantSchema = new mongoose.Schema({
   },
   weight: Number,
   price: Number,
-  pizza: {type: mongoose.Schema.Types.ObjectId, ref: 'Pizza'},
+  pizzaId: {type: mongoose.Schema.Types.ObjectId, ref: 'Pizza'},
 
 }, {timestamps: true});
+
+PizzaVariantSchema.methods.toJSON = function () {
+  return {
+    id: this.id,
+    name: this.name,
+    price: this.price,
+    weight: this.weight,
+    pizzaId: this.pizzaId
+  };
+};
 
 mongoose.model('PizzaVariant', PizzaVariantSchema);

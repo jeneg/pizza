@@ -55,7 +55,7 @@ function insert() {
       let variant = new PizzaVariant();
       Object.assign(variant, size);
 
-      variant.pizza = pizza.id;
+      variant.pizzaId = pizza.id;
       await variant.save();
 
       variantsIds.push(variant.id);
