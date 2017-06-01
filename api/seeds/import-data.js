@@ -1,44 +1,87 @@
-const pizzasData = require('./json/pizzas.json');
+let pizzasData = require('./json/pizzas.json');
 const mongoose = require('mongoose');
 const slug = require('slug');
 mongoose.connect('mongodb://localhost/pizza');
 require('../models/Pizza');
 require('../models/Pizza-variant');
+require('../models/Ingredient');
 const Pizza = mongoose.model('Pizza');
 const PizzaVariant = mongoose.model('PizzaVariant');
+const Ingredient = mongoose.model('Ingredient');
 
-pizzasData.forEach(async function (item) {
-  item.slug = slug(item.name, {lower: true});
-  item.price = Math.round(item.price);
+function getIngs() {
+  return pizzasData.reduce((res, pizza) => {
+    (pizza.ingredients || []).forEach(ing => {
+      if (!res.includes(ing)) {
+        res.push(ing);
+      }
+    });
 
-  let sizes = item.sizes.slice();
+    return res;
+  }, []);
+}
 
-  delete item.sizes;
+let ingPromises = getIngs().map(function (ing) {
+  let i = new Ingredient();
 
-  let pizza = new Pizza();
+  i.name = ing;
+  return i.save();
+});
 
-  Object.assign(pizza, item);
-  await pizza.save();
+Promise.all(ingPromises).then(insert);
 
-  let variantsIds = [];
+function insert() {
+  pizzasData.forEach(async function (item) {
+    item.slug = slug(item.name, {lower: true});
+    item.price = Math.round(item.price);
 
-  let promises = sizes.map(async (size) => {
-    let variant = new PizzaVariant();
-    Object.assign(variant, size);
+    let sizes = (item.sizes || []).slice();
+    let ingredients = (item.ingredients || []).slice();
 
-    variant.pizza = pizza.id;
-    await variant.save();
+    let ingredientsIDs = await importIngredients(ingredients);
 
-    variantsIds.push(variant.id);
+    delete item.sizes;
+    delete item.ingredients;
+
+    let pizza = new Pizza();
+    Object.assign(pizza, item);
+    pizza.ingredients = ingredientsIDs;
+
+    await pizza.save();
+
+    let variantsIds = [];
+
+    let promises = sizes.map(async (size) => {
+      let variant = new PizzaVariant();
+      Object.assign(variant, size);
+
+      variant.pizza = pizza.id;
+      await variant.save();
+
+      variantsIds.push(variant.id);
+    });
+
+    await Promise.all(promises);
+
+    pizza.variants = variantsIds;
+
+    await pizza.save()
   });
 
-  await Promise.all(promises);
+}
 
-  console.log(variantsIds);
+async function importIngredients(items) {
+  let promises = items.map(async item => {
+    try {
+      let exist = await Ingredient.findOne({'name': item});
 
-  pizza.variants = variantsIds;
+      if (exist) {
+        return exist.id;
+      }
+    } catch (e) {
+      console.error(e);
+    }
+  });
 
-  await pizza.save()
-
-
-});
+  return Promise.all(promises);
+}

@@ -16,6 +16,7 @@ async function addPizza(ctx, next) {
 async function getPizza(ctx, next) {
   ctx.body = await Pizza.findOne({'slug': ctx.params.slug})
     .populate('variants')
+    .populate('ingredients')
     .then(function (pizza) {
       if (!pizza) { return ctx.throw(404); }
 

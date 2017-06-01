@@ -11,12 +11,13 @@ let PizzaSchema = new mongoose.Schema({
     type: String,
     index: true,
     required: true,
+
     unique: true
   },
   images: [String],
   description: String,
-  ingredients: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient' }],
-  variants: [{ type: mongoose.Schema.Types.ObjectId, ref: 'PizzaVariant' }]
+  ingredients: [{type: mongoose.Schema.Types.ObjectId, ref: 'Ingredient'}],
+  variants: [{type: mongoose.Schema.Types.ObjectId, ref: 'PizzaVariant'}]
 }, {timestamps: true});
 
 PizzaSchema.plugin(uniqueValidator, {message: 'slug is already exist'});

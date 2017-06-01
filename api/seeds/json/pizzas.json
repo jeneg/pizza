@@ -40,6 +40,11 @@
         "weight": 570,
         "price": 15799
       }
+    ],
+    "ingredients": [
+      "Domino's sauce",
+      "Mozzarella",
+      "Tomatoes"
     ]
   },
   {
@@ -83,6 +88,12 @@
         "weight": 570,
         "price": 15799
       }
+    ],
+    "ingredients": [
+      "Mozzarella",
+      "Pepperoni",
+      "Tomatoes",
+      "Barbecue sauce"
     ]
   },
   {
@@ -126,6 +137,12 @@
         "weight": 655,
         "price": 15799
       }
+    ],
+    "ingredients": [
+      "Bavarian sausages",
+      "Alfredo sauce",
+      "Mozzarella",
+      "Mushrooms"
     ]
   },
   {
@@ -169,6 +186,14 @@
         "weight": 570,
         "price": 15799
       }
+    ],
+    "ingredients": [
+      "Corn",
+      "Onion",
+      "Mozzarella",
+      "Mushrooms",
+      "Bavarian sausages",
+      "Barbecue sauce"
     ]
   },
   {
@@ -212,6 +237,14 @@
         "weight": 570,
         "price": 19499
       }
+    ],
+    "ingredients": [
+      "Bacon",
+      "Chicken",
+      "Onion",
+      "Mozzarella",
+      "Mushrooms",
+      "Barbecue sauce"
     ]
   },
   {
@@ -255,6 +288,12 @@
         "weight": 570,
         "price": 19499
       }
+    ],
+    "ingredients": [
+      "Pineapple",
+      "Domino's sauce",
+      "Mozzarella",
+      "Chicken"
     ]
   },
   {
@@ -298,6 +337,11 @@
         "weight": 570,
         "price": 19499
       }
+    ],
+    "ingredients": [
+      "Domino's sauce",
+      "Mozzarella",
+      "Pepperoni"
     ]
   },
   {
@@ -341,6 +385,14 @@
         "weight": 510,
         "price": 19999
       }
+    ],
+    "ingredients": [
+      "Bacon",
+      "Ham",
+      "Onion",
+      "Mozzarella",
+      "Mushrooms",
+      "Alfredo sauce"
     ]
   },
   {
@@ -384,6 +436,12 @@
         "weight": 510,
         "price": 19999
       }
+    ],
+    "ingredients": [
+      "Parmesan",
+      "Mozzarella",
+      "Bavarian sausages",
+      "Barbecue sauce"
     ]
   },
   {
@@ -427,6 +485,15 @@
         "weight": 510,
         "price": 19999
       }
+    ],
+    "ingredients": [
+      "Domino's sauce",
+      "Onion",
+      "Mozzarella",
+      "Pepper",
+      "Mushrooms",
+      "Tomatoes",
+      "Olives"
     ]
   },
   {
@@ -470,6 +537,15 @@
         "weight": 510,
         "price": 19999
       }
+    ],
+    "ingredients": [
+      "Bacon",
+      "Ham",
+      "Onion",
+      "Mozzarella",
+      "Mushrooms",
+      "Pickled cucumber",
+      "Garlic sauce"
     ]
   },
   {
@@ -513,6 +589,13 @@
         "weight": 510,
         "price": 19999
       }
+    ],
+    "ingredients": [
+      "Mozzarella",
+      "Pepperoni",
+      "Tomatoes",
+      "Olives",
+      "Alfredo sauce"
     ]
   },
   {
@@ -556,6 +639,14 @@
         "weight": 510,
         "price": 19999
       }
+    ],
+    "ingredients": [
+      "Ham",
+      "Danish Blue",
+      "Mozzarella",
+      "Pepperoni",
+      "Tomatoes",
+      "Alfredo sauce"
     ]
   },
   {
@@ -599,6 +690,16 @@
         "weight": 550,
         "price": 22499
       }
+    ],
+    "ingredients": [
+      "Italian sausages",
+      "Parmesan",
+      "Onion",
+      "Mozzarella",
+      "Pepperoni",
+      "Pepper",
+      "Mushrooms",
+      "Barbecue sauce"
     ]
   },
   {
@@ -642,6 +743,13 @@
         "weight": 550,
         "price": 22499
       }
+    ],
+    "ingredients": [
+      "Domino's sauce",
+      "Bacon",
+      "Ham",
+      "Mozzarella",
+      "Pepperoni"
     ]
   },
   {
@@ -685,6 +793,14 @@
         "weight": 550,
         "price": 22499
       }
+    ],
+    "ingredients": [
+      "Jalapenos",
+      "Mozzarella",
+      "Pepperoni",
+      "Domino's sauce",
+      "Bacon",
+      "Tomatoes"
     ]
   },
   {
@@ -728,6 +844,15 @@
         "weight": 550,
         "price": 22499
       }
+    ],
+    "ingredients": [
+      "Ham",
+      "Mozzarella",
+      "Tomatoes",
+      "Bavarian sausages",
+      "Barbecue sauce",
+      "Mustard",
+      "Munich sausages"
     ]
   },
   {
@@ -771,6 +896,11 @@
         "weight": 560,
         "price": 22499
       }
+    ],
+    "ingredients": [
+      "Domino's sauce",
+      "Mozzarella",
+      "Tuna"
     ]
   },
   {
@@ -814,6 +944,14 @@
         "weight": 560,
         "price": 22499
       }
+    ],
+    "ingredients": [
+      "Feta",
+      "Chicken",
+      "Mozzarella",
+      "Alfredo sauce",
+      "Spinach",
+      "Cherry tomatoes"
     ]
   },
   {
@@ -857,6 +995,15 @@
         "weight": 560,
         "price": 23999
       }
+    ],
+    "ingredients": [
+      "Domino's sauce",
+      "Bacon",
+      "Ham",
+      "Parmesan",
+      "Mozzarella",
+      "Pepperoni",
+      "Bavarian sausages"
     ]
   },
   {
@@ -900,6 +1047,18 @@
         "weight": 560,
         "price": 23999
       }
+    ],
+    "ingredients": [
+      "Domino's sauce",
+      "Ham",
+      "Beef",
+      "Italian sausages",
+      "Onion",
+      "Mozzarella",
+      "Pepperoni",
+      "Pepper",
+      "Mushrooms",
+      "Olives"
     ]
   },
   {
@@ -943,6 +1102,16 @@
         "weight": 560,
         "price": 23999
       }
+    ],
+    "ingredients": [
+      "Feta",
+      "Mozzarella",
+      "Pepper",
+      "Mushrooms",
+      "Tomatoes",
+      "Spinach",
+      "Olives",
+      "Alfredo sauce"
     ]
   },
   {
@@ -986,6 +1155,14 @@
         "weight": 560,
         "price": 23999
       }
+    ],
+    "ingredients": [
+      "Feta",
+      "Danish Blue",
+      "Parmesan",
+      "Cheddar",
+      "Mozzarella",
+      "Alfredo sauce"
     ]
   },
   {
@@ -993,6 +1170,7 @@
     "images": [
       ""
     ],
-    "sizes": []
+    "sizes": [],
+    "ingredients": null
   }
 ]
