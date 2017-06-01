@@ -4,7 +4,8 @@ const auth = require('../auth');
 
 router.prefix('/pizzas');
 
-router.get('/', pizzasController.getPizza);
+// router.get('/', pizzasController.getPizza);
+router.get('/:slug', pizzasController.getPizza);
 router.post('/', pizzasController.addPizza);
 
 module.exports = router;

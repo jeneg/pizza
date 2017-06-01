@@ -13,10 +13,12 @@ async function addPizza(ctx, next) {
   ctx.body = {user: data.toAuthJSON()};
 }
 
-async function getPizza(ctx, next){
-  // ctx.body = await Pizza.findById(ctx.state.user.id).then(function(user){
-  //   if(!user){ return ctx.throw(404); }
-  //
-  //   return {user: user.toProfileJSON()};
-  // }).catch(next);
+async function getPizza(ctx, next) {
+  ctx.body = await Pizza.findOne({'slug': ctx.params.slug})
+    .populate('variants')
+    .then(function (pizza) {
+      if (!pizza) { return ctx.throw(404); }
+
+      return {pizza};
+    }).catch(next);
 }
