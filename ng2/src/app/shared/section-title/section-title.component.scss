@@ -1,0 +1,70 @@
+.section-title {
+  padding-top: 104px;
+  padding-bottom: 96px;
+  background: url(../../../assets/img/bg-title.jpg) no-repeat 50% 0;
+  background-size: cover;
+  box-shadow: 0 1px 7px 0 rgba(1, 2, 2, 0.6);
+  text-align: center;
+}
+
+.ui-title-page {
+  margin-bottom: 17px;
+  font-family: 'Fredericka the Great';
+  font-size: 72px;
+  font-weight: normal;
+  color: #fff;
+}
+
+.breadcrumb {
+  position: relative;
+  padding: 7px 42px;
+  margin-bottom: 25px;
+  list-style: none;
+  font-size: 14px;
+  overflow: hidden;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  display: inline-block;
+  border-color: #fdbc2c;
+
+  &:before,
+  &:after {
+    content: '';
+    border-width: 1px;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    height: 100%;
+    width: 30px;
+    transform: rotate(29deg) skewY(36deg) skewX(7deg);
+    border-color: #fdbc2c;
+  }
+
+  &:before {
+    right: -21px;
+  }
+
+  &:after {
+    left: -21px;
+  }
+
+  li {
+    float: left;
+    letter-spacing: -0.03em;
+    color: #fdbc2c;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  > li + li:before {
+    content: "\f105";
+    font-family: 'FontAwesome';
+    padding: 0 9px 0 13px;
+    color: #fdbc2c;
+  }
+}
