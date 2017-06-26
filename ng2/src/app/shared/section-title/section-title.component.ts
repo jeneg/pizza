@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'pi-section-title',
@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./section-title.component.scss']
 })
 export class SectionTitleComponent implements OnInit {
+  @Input() title: string;
 
   constructor() { }
+
 
   ngOnInit() {
   }

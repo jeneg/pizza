@@ -6,11 +6,14 @@ const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser');
 const logger = require('koa-logger');
 const mongoose = require('mongoose');
+const cors = require('koa-cors');
 
 // const index = require('./routes/index');
 // const users = require('./routes/users');
 
 const isProduction = process.env.NODE_ENV === 'production';
+
+app.use(cors());
 
 // error handler
 onerror(app);
