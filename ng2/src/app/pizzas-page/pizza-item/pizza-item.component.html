@@ -1,9 +1,9 @@
 <div class="pizza-builder__item pizza-builder__item_mod-b">
   <div class="pizza-builder__check-img pizza-builder__check-img pizza-builder__check-img_mod-a">
-    <img class="img-responsive center-block" src="assets/media/list-catalog/1.png" height="258" width="258" alt="Foto">
+    <img class="img-responsive center-block" [src]="pizza.images[0]"ß alt="Foto">
   </div>
-  <div class="pizza-builder__check-name">Kimchi BBQ Chicken</div>
-  <div class="pizza-builder__check-description pizza-builder__check-description_mod-a">Slow Cooked Pulled Chicken marinated in Bulgogi sauce, Shitake Mushrooms, Shallots on a Garlic base, Garnished with Kimchi, Red &amp; Green Chilli</div>
+  <div class="pizza-builder__check-name">{{pizza.name}}</div>
+  <div class="pizza-builder__check-description pizza-builder__check-description_mod-a">{{ingredientsList()}}</div>
   <div class="pizza-builder__check-price pizza-builder__check-price_mod-a">$21.00</div>
   <select class="selectpicker bs-select-hidden" data-style="ui-select">
     <option>Small</option>

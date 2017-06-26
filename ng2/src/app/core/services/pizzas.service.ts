@@ -17,6 +17,7 @@ export class PizzasService {
 
   getPizzas(params?): Observable<Pizza[]> {
     return this.http.get(this.utils.getApiUrl('pizzas'), {search: params})
-      .map((data) => data.json());
+      .map((data) => data.json())
+      .map((data) => data.data);
   }
 }

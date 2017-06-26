@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Pizza} from "../../core/services/pizza.model";
 
 @Component({
   selector: 'pi-pizza-item',
@@ -6,11 +7,16 @@ import {Component, Input, OnInit} from '@angular/core';
   styleUrls: ['./pizza-item.component.scss']
 })
 export class PizzaItemComponent implements OnInit {
-  @Input() pizza = {};
+  @Input() pizza: Pizza;
+
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  ingredientsList() {
+    return this.pizza.ingredients.map(i => i.name).join(', ');
   }
 
 }

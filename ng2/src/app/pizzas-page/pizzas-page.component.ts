@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {PizzasService} from "../core/services/pizzas.service";
+import {Pizza} from "../core/services/pizza.model";
 
 @Component({
   selector: 'pi-pizzas-page',
@@ -7,15 +8,16 @@ import {PizzasService} from "../core/services/pizzas.service";
   styleUrls: ['./pizzas-page.component.scss']
 })
 export class PizzasPageComponent implements OnInit {
+  pizzas: Pizza[] = [];
 
   constructor(
     private pizzaService: PizzasService
   ) { }
 
   ngOnInit() {
-    this.pizzaService.getPizzas().subscribe(data => {
-      console.log(data);
+    this.pizzaService.getPizzas().subscribe(res => {
+      this.pizzas = res;
+      console.log(res);
     })
   }
-
 }
