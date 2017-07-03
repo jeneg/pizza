@@ -19,4 +19,7 @@ export class PizzaItemComponent implements OnInit {
     return this.pizza.ingredients.map(i => i.name).join(', ');
   }
 
+  getLowestPrice() {
+    return Math.ceil(this.pizza.variants[0].price / 100);
+  }
 }

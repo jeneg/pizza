@@ -1,0 +1,45 @@
+.pizza-builder__item {
+  position: relative;
+  display: inline-block;
+  width: 25%;
+  margin-right: -4px;
+  padding-top: 18px;
+  padding-right: 15px;
+  padding-bottom: 23px;
+  padding-left: 15px;
+  color: #fff;
+  vertical-align: top;
+  border: 4px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  cursor: pointer;
+  padding-top: 23px;
+
+  &:hover {
+    border-color: #fdbc2c;
+  }
+}
+
+.pizza-builder__item_mod-b .pizza-builder__check-img {
+  height: 239px;
+}
+
+.pizza-builder__check-name {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  font: 24px 'Abril Fatface';
+  color: #fdbc2c;
+}
+
+.pizza-builder__check-description {
+  display: block;
+  margin-bottom: 17px;
+  font-size: 14px;
+}
+
+.pizza-builder__item_mod-b .pizza-builder__check-price {
+  margin-bottom: 14px;
+}

@@ -4,13 +4,9 @@
   </div>
   <div class="pizza-builder__check-name">{{pizza.name}}</div>
   <div class="pizza-builder__check-description pizza-builder__check-description_mod-a">{{ingredientsList()}}</div>
-  <div class="pizza-builder__check-price pizza-builder__check-price_mod-a">$21.00</div>
+  <div class="pizza-builder__check-price pizza-builder__check-price_mod-a">From {{getLowestPrice() | currency}}</div>
   <select class="selectpicker bs-select-hidden" data-style="ui-select">
-    <option>Small</option>
-    <option>Medium</option>
-    <option>Large</option>
-    <option>Jumbo</option>
-    <option>Party</option>
-  </select><div class="btn-group bootstrap-select"><button type="button" class="btn dropdown-toggle ui-select" data-toggle="dropdown" title="Small"><span class="filter-option pull-left">Small</span>&nbsp;<span class="ui-select__icon"></span></button><div class="dropdown-menu open"><ul class="dropdown-menu inner" role="menu"><li data-original-index="0" class="selected"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Small</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="1"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Medium</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="2"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Large</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="3"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Jumbo</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li><li data-original-index="4"><a tabindex="0" class="" style="" data-tokens="null"><span class="text">Party</span><span class="glyphicon glyphicon-ok check-mark"></span></a></li></ul></div></div>
+    <option *ngFor="let variant of pizza.variants">{{variant.name}} ({{variant.price}})</option>
+  </select>
   <a class="pizza-builder__btn-select ui-btn ui-btn-primary btn-effect" href="javascript:void(0);">add</a>
 </div>
