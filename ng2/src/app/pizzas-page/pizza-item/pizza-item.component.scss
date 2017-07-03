@@ -23,7 +23,7 @@
 }
 
 .pizza-builder__item_mod-b .pizza-builder__check-img {
-  height: 239px;
+  height: 200px;
 }
 
 .pizza-builder__check-name {
@@ -42,4 +42,7 @@
 
 .pizza-builder__item_mod-b .pizza-builder__check-price {
   margin-bottom: 14px;
+  display: block;
+  font: 24px 'Fredericka the Great';
+  color: #D94F2B;
 }

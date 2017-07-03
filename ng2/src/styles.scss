@@ -6,3 +6,9 @@ body {
   font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
