@@ -9,4 +9,8 @@ export class UtilsService {
   getApiUrl(path: string): string {
     return `${environment.apiUrl}${path}`;
   }
+
+  localeCompare(a: string, b: string) {
+    return a.toLowerCase().localeCompare(b.toLowerCase())
+  }
 }

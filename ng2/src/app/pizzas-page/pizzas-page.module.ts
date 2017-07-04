@@ -6,6 +6,7 @@ import {SharedModule} from '../shared/shared.module';
 import {PizzaFilterComponent} from './pizza-filter/pizza-filter.component';
 import {PizzaListComponent} from './pizza-list/pizza-list.component';
 import {PizzaItemComponent} from './pizza-item/pizza-item.component';
+import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 const pizzasRouting: ModuleWithProviders = RouterModule.forChild([{
   path: 'pizzas',
@@ -16,7 +17,8 @@ const pizzasRouting: ModuleWithProviders = RouterModule.forChild([{
   imports: [
     pizzasRouting,
     CommonModule,
-    SharedModule
+    SharedModule,
+    NgbModule
   ],
   declarations: [PizzasPageComponent, PizzaFilterComponent, PizzaListComponent, PizzaItemComponent]
 })

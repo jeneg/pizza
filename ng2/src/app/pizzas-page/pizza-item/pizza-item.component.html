@@ -4,9 +4,19 @@
   </div>
   <div class="pizza-builder__check-name">{{pizza.name}}</div>
   <div class="pizza-builder__check-description pizza-builder__check-description_mod-a">{{ingredientsList()}}</div>
-  <div class="pizza-builder__check-price pizza-builder__check-price_mod-a">From {{getLowestPrice() | currency}}</div>
-  <select class="selectpicker bs-select-hidden" data-style="ui-select">
-    <option *ngFor="let variant of pizza.variants">{{variant.name}} ({{variant.price}})</option>
-  </select>
-  <a class="pizza-builder__btn-select ui-btn ui-btn-primary btn-effect" href="javascript:void(0);">add</a>
+  <div class="pizza-builder__check-price pizza-builder__check-price_mod-a">${{formatPrice(this.selectedVariant?.price)}}</div>
+
+  <div ngbDropdown class="d-inline-block">
+    <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>{{selectedVariant.name}}</button>
+    <div class="dropdown-menu" aria-labelledby="dropdownBasic1">
+      <button
+        *ngFor="let variant of pizza.variants"
+        (click)="selectVariant(variant)"
+        class="dropdown-item">
+        {{variant.name}}
+      </button>
+    </div>
+  </div>
+
+  <pi-button [label]="'Add'" [type]="'primary'"></pi-button>
 </div>

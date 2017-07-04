@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import {UtilsService} from './utils.service';
 import 'rxjs/add/operator/map';
 import {Pizza} from './pizza.model';
+import {PizzaVariant} from "./pizza-variant.model";
 
 
 
@@ -18,6 +19,18 @@ export class PizzasService {
   getPizzas(params?): Observable<Pizza[]> {
     return this.http.get(this.utils.getApiUrl('pizzas'), {search: params})
       .map((data) => data.json())
-      .map((data) => data.data);
+      .map((data) => {
+        let pizzas = <Pizza[]>data.data;
+
+        pizzas.forEach(p => {
+          if (Array.isArray(p.variants)) {
+            p.variants.sort((a: PizzaVariant, b: PizzaVariant) => {
+              return this.utils.localeCompare(a.name, b.name);
+            })
+          }
+        });
+
+        return pizzas;
+      });
   }
 }
