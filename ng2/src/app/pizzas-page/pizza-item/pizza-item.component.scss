@@ -17,12 +17,21 @@
   cursor: pointer;
   padding-top: 23px;
 
+  .controls {
+    opacity: 0;
+    transition: all 0.3s;
+  }
+
   &:hover {
     border-color: #fdbc2c;
+
+    .controls {
+      opacity: 1;
+    }
   }
 }
 
-.pizza-builder__item_mod-b .pizza-builder__check-img {
+.pizza-builder__item .pizza-builder__check-img {
   height: 200px;
 }
 
@@ -40,9 +49,33 @@
   font-size: 14px;
 }
 
-.pizza-builder__item_mod-b .pizza-builder__check-price {
+.pizza-builder__item .pizza-builder__check-price {
   margin-bottom: 14px;
   display: block;
   font: 24px 'Fredericka the Great';
   color: #D94F2B;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: 1px solid #fff;
+  padding: 3px 10px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  transition: all 0.3s;
+
+  &:hover {
+    border-color: #fdbc2c;
+  }
+}
+
+.dropdown-item {
+  font-family: "Josefin Sans", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
+
+.add-button /deep/ button {
+  padding: 4px 10px;
 }
