@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {SharedModule} from './shared/shared.module';
 import {PizzasPageModule} from './pizzas-page/pizzas-page.module';
 import {CoreModule} from './core/core.module';
+import {SidebarModule} from "ng-sidebar";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {CoreModule} from './core/core.module';
     AppRoutingModule,
     CoreModule,
     SharedModule,
-    PizzasPageModule
+    PizzasPageModule,
+    SidebarModule.forRoot()
   ],
   providers: [
   ],

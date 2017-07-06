@@ -1,0 +1,75 @@
+.section-list-cart {
+  padding-right: 34px;
+  padding-left: 34px;
+  padding-top: 17px;
+  background-color: #222222;
+}
+
+.ui-title-inner {
+  margin-top: 0;
+  font: 36px 'Abril Fatface';
+  color: #fdbc2c;
+}
+
+.list-cart {
+  margin-top: 25px;
+  border-top: 1px solid #010202;
+  box-shadow: 0 -1px 0 0 #383838;
+}
+
+.list-cart__item {
+  padding: 19px 0 23px 0;
+  font-size: 14px;
+  border-bottom: 1px solid #383838;
+  box-shadow: 0 1px 0 0 #010202;
+  overflow: hidden;
+}
+
+.list-cart__img {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.list-cart__img img {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.list-cart__inner {
+  display: inline-block;
+  width: 130px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.list-cart__title {
+  margin-top: 0;
+  margin-bottom: 6px;
+  font-size: 24px;
+  color: #fdbc2c;
+  font-family: 'Abril Fatface';
+}
+
+.list-cart__icon {
+  cursor: pointer;
+}
+
+.list-cart__size_name {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.list-cart__price {
+  margin-top: 12px;
+}
+
+.total-price {
+  margin-top: 25px;
+  margin-bottom: 30px;
+  font: 24px 'Fredericka the Great';
+  color: #D94F2B;
+}
+
+.total-price__number {
+  float: right;
+}

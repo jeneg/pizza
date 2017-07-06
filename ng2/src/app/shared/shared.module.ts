@@ -4,6 +4,7 @@ import {HeaderComponent} from './header/header.component';
 import {SectionTitleComponent} from './section-title/section-title.component';
 import {HttpModule} from '@angular/http';
 import { ButtonComponent } from './button/button.component';
+import { CartTotalComponent } from './cart-total/cart-total.component';
 
 @NgModule({
   imports: [
@@ -13,9 +14,15 @@ import { ButtonComponent } from './button/button.component';
   exports: [
     HeaderComponent,
     SectionTitleComponent,
-    ButtonComponent
+    ButtonComponent,
+    CartTotalComponent
   ],
-  declarations: [HeaderComponent, SectionTitleComponent, ButtonComponent]
+  declarations: [
+    HeaderComponent,
+    SectionTitleComponent,
+    ButtonComponent,
+    CartTotalComponent
+  ]
 })
 export class SharedModule {
 }

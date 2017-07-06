@@ -1,2 +1,21 @@
-<pi-header></pi-header>
-<router-outlet></router-outlet>
+<ng-sidebar-container>
+
+  <!-- A sidebar -->
+  <ng-sidebar
+    [(opened)]="isCartSidebarOpened"
+    [mode]="'push'"
+    [position]="'right'"
+    [showBackdrop]="true"
+    [closeOnClickBackdrop]="true"
+    (onClosed)="onSidebarClose()"
+  >
+    <pi-cart-total></pi-cart-total>
+  </ng-sidebar>
+
+  <!-- Page content -->
+  <div ng-sidebar-content>
+    <pi-header></pi-header>
+    <router-outlet></router-outlet>
+  </div>
+
+</ng-sidebar-container>
