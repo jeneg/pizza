@@ -1,6 +1,7 @@
 <div class="pizza-builder__wrap-check">
   <pi-pizza-item
     *ngFor="let pizza of pizzas"
+    (addedPizza)="onPizzaAdded($event)"
     [pizza]="pizza">
   </pi-pizza-item>
 </div>

@@ -1,5 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import {Pizza} from "../../core/services/pizza.model";
+import {PizzaVariant} from "../../core/services/pizza-variant.model";
 
 @Component({
   selector: 'pi-pizza-list',
@@ -8,10 +9,15 @@ import {Pizza} from "../../core/services/pizza.model";
 })
 export class PizzaListComponent implements OnInit {
   @Input() pizzas: Pizza[] = [];
+  @Output() addedPizzaVariant: EventEmitter<PizzaVariant> = new EventEmitter<PizzaVariant>();
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onPizzaAdded(pizzaVariant: PizzaVariant) {
+    this.addedPizzaVariant.emit(pizzaVariant);
   }
 
 }

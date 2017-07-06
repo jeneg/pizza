@@ -13,7 +13,11 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12">
-        <pi-pizza-list [pizzas]="pizzas"></pi-pizza-list>
+        <pi-pizza-list
+          [pizzas]="pizzas"
+          (addedPizzaVariant)="onAddPizza($event)"
+
+        ></pi-pizza-list>
 
         <ul class="pagination">
           <li><a href="javascript:void(0);"></a></li>

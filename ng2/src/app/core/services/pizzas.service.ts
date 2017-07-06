@@ -10,6 +10,7 @@ import {PizzaVariant} from "./pizza-variant.model";
 
 @Injectable()
 export class PizzasService {
+  private pizzas: Pizza[];
 
   constructor(
     private http: Http,
@@ -30,7 +31,22 @@ export class PizzasService {
           }
         });
 
+        this.pizzas = pizzas;
+
         return pizzas;
       });
+  }
+
+  getPizzaById(id: string): Pizza {
+    let foundPizza: Pizza = null;
+
+    this.pizzas.some(p => {
+      if (p._id === id) {
+        foundPizza = p;
+        return true;
+      }
+    });
+
+    return foundPizza;
   }
 }

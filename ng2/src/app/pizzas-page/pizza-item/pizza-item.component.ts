@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import {Pizza} from "../../core/services/pizza.model";
 import {PizzaVariant} from "../../core/services/pizza-variant.model";
 
@@ -9,6 +9,8 @@ import {PizzaVariant} from "../../core/services/pizza-variant.model";
 })
 export class PizzaItemComponent implements OnInit {
   @Input() pizza: Pizza;
+  @Output() addedPizza: EventEmitter<PizzaVariant> = new EventEmitter<PizzaVariant>();
+
   selectedVariant: PizzaVariant;
 
   constructor() {
@@ -28,5 +30,9 @@ export class PizzaItemComponent implements OnInit {
 
   selectVariant(variant: PizzaVariant) {
     this.selectedVariant = variant;
+  }
+
+  onAdd() {
+    this.addedPizza.emit(this.selectedVariant);
   }
 }
