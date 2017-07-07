@@ -1,7 +1,7 @@
 export class PizzaVariant {
   createdAt?: string;
   updatedAt?: string;
-  _id: string;
+  id: string;
   pizzaId: string;
   price: number;
   weight: number;

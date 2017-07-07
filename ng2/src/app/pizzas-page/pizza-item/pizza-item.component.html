@@ -4,7 +4,7 @@
   </div>
   <div class="pizza-builder__check-name">{{pizza.name}}</div>
   <div class="pizza-builder__check-description pizza-builder__check-description_mod-a">{{ingredientsList()}}</div>
-  <div class="pizza-builder__check-price pizza-builder__check-price_mod-a">${{formatPrice(this.selectedVariant?.price)}}</div>
+  <div class="pizza-builder__check-price pizza-builder__check-price_mod-a">${{selectedVariant?.price}}</div>
 
   <div class="controls">
     <div ngbDropdown class="d-inline-block">

@@ -17,37 +17,54 @@ export class CartService {
     private pizzaService: PizzasService
   ) { }
 
-  openCart() {
+  openCart(): void {
     this.cartOpenedSource.next(true);
   }
 
-  closeCart() {
+  closeCart(): void {
     this.cartOpenedSource.next(false);
   }
 
-  toggleCart() {
-    let val = this.cartOpenedSource.getValue();
+  toggleCart(): void {
+    const val = this.cartOpenedSource.getValue();
     this.cartOpenedSource.next(!val);
   }
 
-  addToCart(pizzaVariant: PizzaVariant) {
-    let items = this.cartItemsSource.getValue();
-    let existItem;
+  addToCart(pizzaVariant: PizzaVariant): void {
+    const items: CartItem[] = this.cartItemsSource.getValue();
+    let existItem: CartItem;
+    let nextValue;
 
-    this.cartItemsSource.next([...items, this.composeCartItem(pizzaVariant)])
+    items.some(item => {
+      if (item.pizzaVariant && item.pizzaVariant.id === pizzaVariant.id) {
+        existItem = item;
+        return true;
+      }
+    });
 
-    //todo
+    if (existItem) {
+      existItem.quantity++;
+      nextValue = items;
 
-    // items.some(item => {
-    //   if (item.pizzaVariant && item.pizzaVariant.id === pizzaVariant.id) {
-    //
-    //   }
-    // })
-    console.log(pizzaVariant);
+    } else {
+      nextValue = [...items, this.composeCartItem(pizzaVariant)];
+    }
+
+    this.cartItemsSource.next(nextValue);
   }
 
-  composeCartItem(pizzaVariant: PizzaVariant, quantity: number = 1) {
-    let pizza: Pizza = this.pizzaService.getPizzaById(pizzaVariant.pizzaId);
+  getTotalPrice(): number {
+    const cartItems: CartItem[] = this.cartItemsSource.getValue();
+
+    return cartItems.reduce((total: number, i: CartItem) => {
+      total += i.quantity * i.pizzaVariant.price;
+
+      return total;
+    }, 0);
+  }
+
+  private composeCartItem(pizzaVariant: PizzaVariant, quantity: number = 1): CartItem {
+    const pizza: Pizza = this.pizzaService.getPizzaById(pizzaVariant.pizzaId);
 
     return {
       pizza,

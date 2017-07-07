@@ -24,10 +24,6 @@ export class PizzaItemComponent implements OnInit {
     return this.pizza.ingredients.map(i => i.name).join(', ');
   }
 
-  formatPrice(price: number) {
-    return Math.ceil(price / 100 / 27); // todo :D
-  }
-
   selectVariant(variant: PizzaVariant) {
     this.selectedVariant = variant;
   }

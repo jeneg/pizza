@@ -27,6 +27,11 @@ export class PizzasService {
           if (Array.isArray(p.variants)) {
             p.variants.sort((a: PizzaVariant, b: PizzaVariant) => {
               return this.utils.localeCompare(a.name, b.name);
+            });
+
+            // todo..
+            p.variants.forEach(v => {
+              v.price = Math.ceil(v.price / 100 / 27);
             })
           }
         });
