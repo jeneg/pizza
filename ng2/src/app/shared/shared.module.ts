@@ -5,6 +5,7 @@ import {SectionTitleComponent} from './section-title/section-title.component';
 import {HttpModule} from '@angular/http';
 import { ButtonComponent } from './button/button.component';
 import { CartTotalComponent } from './cart-total/cart-total.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   imports: [
@@ -15,13 +16,15 @@ import { CartTotalComponent } from './cart-total/cart-total.component';
     HeaderComponent,
     SectionTitleComponent,
     ButtonComponent,
-    CartTotalComponent
+    CartTotalComponent,
+    FooterComponent
   ],
   declarations: [
     HeaderComponent,
     SectionTitleComponent,
     ButtonComponent,
-    CartTotalComponent
+    CartTotalComponent,
+    FooterComponent
   ]
 })
 export class SharedModule {
