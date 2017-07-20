@@ -30,4 +30,9 @@ export class CartTotalComponent implements OnInit, OnDestroy {
     this.itemsSubscribe.unsubscribe();
   }
 
+  removeItem(i: CartItem) {
+    this.cart.removeFromCart(i.pizzaVariant);
+    console.log(i)
+  }
+
 }

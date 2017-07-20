@@ -3,7 +3,8 @@
   <ul class="list-cart list-unstyled">
     <li class="list-cart__item" *ngFor="let i of cartState.items">
       <div class="list-cart__img">
-        <i class="list-cart__icon icon fa fa-times js-del"></i>
+        <i class="list-cart__icon icon fa fa-times js-del"
+          (click)="removeItem(i)"></i>
         <img class="img-responsive"
              [src]="i.pizza.images[0]"
              height="87" width="87"

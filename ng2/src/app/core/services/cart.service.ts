@@ -50,15 +50,8 @@ export class CartService {
 
   addToCart(pizzaVariant: PizzaVariant): void {
     const items: CartItem[] = this.cartItemsSource.getValue();
-    let existItem: CartItem;
+    const existItem: CartItem = this.findCartItemByVariantId(pizzaVariant.id);
     let nextItemsValue;
-
-    items.some(item => {
-      if (item.pizzaVariant && item.pizzaVariant.id === pizzaVariant.id) {
-        existItem = item;
-        return true;
-      }
-    });
 
     if (existItem) {
       existItem.quantity++;
@@ -69,6 +62,32 @@ export class CartService {
     }
 
     this.cartItemsSource.next(nextItemsValue);
+  }
+
+  removeFromCart(pizzaVariant: PizzaVariant) {
+    const items: CartItem[] = this.cartItemsSource.getValue();
+    const existItem: CartItem = this.findCartItemByVariantId(pizzaVariant.id);
+    let nextItemsValue;
+
+    if (existItem) {
+      nextItemsValue = items.filter(i => i !== existItem);
+
+      this.cartItemsSource.next(nextItemsValue);
+    }
+  }
+
+  private findCartItemByVariantId(id: string): CartItem {
+    const items: CartItem[] = this.cartItemsSource.getValue();
+    let existItem: CartItem = null;
+
+    items.some(item => {
+      if (item.pizzaVariant && item.pizzaVariant.id === id) {
+        existItem = item;
+        return true;
+      }
+    });
+
+    return existItem;
   }
 
   private composeCartItem(pizzaVariant: PizzaVariant, quantity: number = 1): CartItem {
