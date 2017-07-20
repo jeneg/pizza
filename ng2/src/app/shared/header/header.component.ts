@@ -1,5 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {CartService} from "../../core/services/cart.service";
+import {Subscription} from "rxjs/Subscription";
+import {CartState} from "../../core/services/cart-state.model";
 
 @Component({
   selector: 'pi-header',
@@ -7,18 +9,21 @@ import {CartService} from "../../core/services/cart.service";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
+  subscription: Subscription;
+  itemsCount: number;
 
-  // subscription: Subscription;
   constructor(
     private cart: CartService
   ) { }
 
   ngOnInit() {
-    // this.subscription = this.cart.cartOpened$.su
+    this.subscription = this.cart.cart$.subscribe((state: CartState) => {
+      this.itemsCount = state.itemsCount;
+    })
   }
 
   ngOnDestroy() {
-    // this.subscription.unsubscribe();
+    this.subscription.unsubscribe();
   }
 
   onCartClick() {
