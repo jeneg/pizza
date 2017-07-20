@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {CartService} from "../../core/services/cart.service";
 import {Subscription} from "rxjs/Subscription";
 import {CartItem} from "../../core/services/cart-item.model";
+import {CartState} from "../../core/services/cart-state.model";
 
 @Component({
   selector: 'pi-cart-total',
@@ -10,7 +11,7 @@ import {CartItem} from "../../core/services/cart-item.model";
 })
 export class CartTotalComponent implements OnInit, OnDestroy {
   private itemsSubscribe: Subscription;
-  cartItems: CartItem[];
+  cartState: CartState;
   totalPrice: number;
 
   constructor(
@@ -18,10 +19,10 @@ export class CartTotalComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
-    this.itemsSubscribe = this.cart.cartItems$.subscribe((items: CartItem[]) => {
-      this.cartItems = items;
-      this.totalPrice = this.cart.getTotalPrice();
-      console.log(items);
+    this.itemsSubscribe = this.cart.cart$.subscribe((cartState: CartState) => {
+      this.cartState = cartState;
+      // this.totalPrice = this.cart.getTotalPrice();
+      // console.log(cartState);
     })
   }
 

@@ -1,9 +1,14 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
+import {Observable} from "rxjs/Observable";
+
 import {PizzaVariant} from "./pizza-variant.model";
 import {Pizza} from "./pizza.model";
 import {PizzasService} from "./pizzas.service";
 import {CartItem} from "./cart-item.model";
+import {CartState} from "./cart-state.model";
+import 'rxjs/add/operator/map';
+
 
 @Injectable()
 export class CartService {
@@ -11,11 +16,24 @@ export class CartService {
   private cartItemsSource = new BehaviorSubject<CartItem[]>([]);
 
   cartOpened$ = this.cartOpenedSource.asObservable();
+
   cartItems$ = this.cartItemsSource.asObservable();
+
+  cart$ = new Observable<CartState>();
 
   constructor(
     private pizzaService: PizzasService
-  ) { }
+  ) {
+
+    // todo find out better way
+    this.cart$ = this.cartItemsSource.map((items: CartItem[]) => {
+      return {
+        items: items,
+        itemsCount: this.getItemsCount(items),
+        itemsPrice: this.getTotalPrice(items)
+      }
+    });
+  }
 
   openCart(): void {
     this.cartOpenedSource.next(true);
@@ -33,7 +51,7 @@ export class CartService {
   addToCart(pizzaVariant: PizzaVariant): void {
     const items: CartItem[] = this.cartItemsSource.getValue();
     let existItem: CartItem;
-    let nextValue;
+    let nextItemsValue;
 
     items.some(item => {
       if (item.pizzaVariant && item.pizzaVariant.id === pizzaVariant.id) {
@@ -44,23 +62,13 @@ export class CartService {
 
     if (existItem) {
       existItem.quantity++;
-      nextValue = items;
+      nextItemsValue = items;
 
     } else {
-      nextValue = [...items, this.composeCartItem(pizzaVariant)];
+      nextItemsValue = [...items, this.composeCartItem(pizzaVariant)];
     }
 
-    this.cartItemsSource.next(nextValue);
-  }
-
-  getTotalPrice(): number {
-    const cartItems: CartItem[] = this.cartItemsSource.getValue();
-
-    return cartItems.reduce((total: number, i: CartItem) => {
-      total += i.quantity * i.pizzaVariant.price;
-
-      return total;
-    }, 0);
+    this.cartItemsSource.next(nextItemsValue);
   }
 
   private composeCartItem(pizzaVariant: PizzaVariant, quantity: number = 1): CartItem {
@@ -73,5 +81,18 @@ export class CartService {
     }
   }
 
+  private getTotalPrice(items: CartItem[]): number {
+    return items.reduce((total: number, i: CartItem) => {
+      total += i.quantity * i.pizzaVariant.price;
+      return total;
+    }, 0);
+  }
 
+  private getItemsCount(items: CartItem[]): number {
+    return items.reduce((count: number, item: CartItem) => {
+      count += item.quantity;
+
+      return count;
+    }, 0)
+  }
 }

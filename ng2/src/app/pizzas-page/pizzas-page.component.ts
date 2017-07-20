@@ -20,7 +20,7 @@ export class PizzasPageComponent implements OnInit {
   ngOnInit() {
     this.pizzaService.getPizzas().subscribe(res => {
       this.pizzas = res;
-      console.log(res);
+      // console.log(res);
     })
   }
 

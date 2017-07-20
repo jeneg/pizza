@@ -1,7 +1,7 @@
 <aside class="section-list-cart">
   <h2 class="ui-title-inner">Cart Totals</h2>
   <ul class="list-cart list-unstyled">
-    <li class="list-cart__item" *ngFor="let i of cartItems">
+    <li class="list-cart__item" *ngFor="let i of cartState.items">
       <div class="list-cart__img">
         <i class="list-cart__icon icon fa fa-times js-del"></i>
         <img class="img-responsive"
@@ -22,7 +22,7 @@
 
   <div class="total-price clearfix">
     Order Total
-    <span class="total-price__number">${{totalPrice}}</span>
+    <span class="total-price__number">${{cartState.itemsPrice}}</span>
   </div>
 
   <button class="ui-btn ui-btn--mod-a ui-btn--effect btn-block">view shopping cart</button>
