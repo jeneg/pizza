@@ -7,6 +7,7 @@ import {SharedModule} from './shared/shared.module';
 import {PizzasPageModule} from './pizzas-page/pizzas-page.module';
 import {CoreModule} from './core/core.module';
 import {SidebarModule} from "ng-sidebar";
+import {CheckoutModule} from "./checkout/checkout.module";
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {SidebarModule} from "ng-sidebar";
     CoreModule,
     SharedModule,
     PizzasPageModule,
+    CheckoutModule,
     SidebarModule.forRoot()
   ],
   providers: [
