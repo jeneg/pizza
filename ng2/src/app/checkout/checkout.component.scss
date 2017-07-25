@@ -1,0 +1,83 @@
+.section_mod-f {
+  padding-top: 50px;
+  padding-bottom: 95px;
+}
+
+.ui-title-inner {
+  margin-top: 0;
+  font: 36px 'Abril Fatface';
+  color: #fdbc2c;
+}
+
+.ui-title-inner_mod-a {
+  margin-top: 17px;
+  margin-bottom: 27px;
+}
+
+.ui-form-label {
+  display: block;
+  padding-top: 9px;
+  padding-bottom: 7px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.form-control {
+  background: none;
+  border: 1px solid #ccc;
+  border-radius: 0;
+  width: 100%;
+  height: 44px;
+  padding: 10px 20px;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+.section-table-order {
+  padding: 20px 30px 25px 35px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.table-order {
+  width: 100%;
+  margin-top: 25px;
+  font-size: 14px;
+
+  & > thead > tr > th {
+    padding-bottom: 25px;
+    border-bottom: 1px solid #383838;
+    box-shadow: 0 2px 0 0 rgba(1, 2, 2, 0.55);
+  }
+
+  & > tbody > tr:first-child > td {
+    padding-top: 22px;
+  }
+
+  & > thead > tr > th:last-child,
+  & > tbody > tr > td:last-child,
+  & > tfoot > tr > td:last-child {
+    padding-left: 10px;
+  }
+
+  & > tbody > tr:last-child > td {
+    padding-bottom: 22px;
+  }
+
+  & tr > td {
+    padding-top: 14px;
+  }
+
+  & tr > &__total {
+    padding-bottom: 25px;
+    font: 24px 'Fredericka the Great';
+    color: #D94F2B;
+    padding-top: 22px;
+    border-top: 1px solid #383838;
+    box-shadow: 0 -1px 0 0 rgba(1, 2, 2, 0.55);
+  }
+}
+

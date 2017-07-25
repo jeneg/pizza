@@ -12,6 +12,12 @@ body {
   font-size: 14px;
 }
 
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
 .img-responsive {
   display: block;
   max-width: 100%;

@@ -23,8 +23,6 @@ export class CartTotalComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.itemsSubscribe = this.cart.cart$.subscribe((cartState: CartState) => {
       this.cartState = cartState;
-      // this.totalPrice = this.cart.getTotalPrice();
-      // console.log(cartState);
     })
   }
 
@@ -37,8 +35,8 @@ export class CartTotalComponent implements OnInit, OnDestroy {
     console.log(i)
   }
 
-  goTo(path) {
-    this.router.navigate([path]);
+  checkout() {
+    this.cart.closeCart();
+    this.router.navigate(['/checkout']);
   }
-
 }

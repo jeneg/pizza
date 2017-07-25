@@ -55,6 +55,7 @@ export class CartService {
 
     if (existItem) {
       existItem.quantity++;
+      existItem.totalPrice = this.getCartItemTotalPrice(existItem);
       nextItemsValue = items;
 
     } else {
@@ -93,11 +94,16 @@ export class CartService {
   private composeCartItem(pizzaVariant: PizzaVariant, quantity: number = 1): CartItem {
     const pizza: Pizza = this.pizzaService.getPizzaById(pizzaVariant.pizzaId);
 
-    return {
+    let item = {
       pizza,
       pizzaVariant,
-      quantity
-    }
+      quantity,
+      totalPrice: null
+    };
+
+    item.totalPrice = this.getCartItemTotalPrice(item);
+
+    return item;
   }
 
   private getTotalPrice(items: CartItem[]): number {
@@ -105,6 +111,10 @@ export class CartService {
       total += i.quantity * i.pizzaVariant.price;
       return total;
     }, 0);
+  }
+
+  private getCartItemTotalPrice(i: CartItem) {
+    return i.quantity * i.pizzaVariant.price;
   }
 
   private getItemsCount(items: CartItem[]): number {

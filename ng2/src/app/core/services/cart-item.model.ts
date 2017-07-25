@@ -5,4 +5,5 @@ export class CartItem {
   pizza: Pizza;
   pizzaVariant: PizzaVariant;
   quantity: number;
+  totalPrice: number;
 }
