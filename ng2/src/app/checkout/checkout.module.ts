@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {RouterModule} from "@angular/router";
 import {CheckoutComponent} from "app/checkout/checkout.component";
 import {SharedModule} from "../shared/shared.module";
+import {ReactiveFormsModule} from "@angular/forms";
 
 const checkoutRouting: ModuleWithProviders = RouterModule.forChild([{
   path: 'checkout',
@@ -14,7 +15,8 @@ const checkoutRouting: ModuleWithProviders = RouterModule.forChild([{
   imports: [
     CommonModule,
     checkoutRouting,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ],
   declarations: [CheckoutComponent]
 })

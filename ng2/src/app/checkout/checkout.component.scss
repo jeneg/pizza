@@ -31,6 +31,11 @@
   padding: 10px 20px;
   margin-bottom: 15px;
   color: #fff;
+  transition: .2s;
+
+  &.has-warning {
+    border-color: #D94F2B;
+  }
 }
 
 textarea.form-control {
@@ -79,5 +84,15 @@ textarea.form-control {
     border-top: 1px solid #383838;
     box-shadow: 0 -1px 0 0 rgba(1, 2, 2, 0.55);
   }
+}
+
+.nothing-to-order {
+  font-size: 20px;
+}
+
+.form-control-feedback {
+  color: #D94F2B;
+  font-size: 14px;
+  margin-left: 10px;
 }
 

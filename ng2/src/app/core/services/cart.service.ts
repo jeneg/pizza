@@ -77,6 +77,10 @@ export class CartService {
     }
   }
 
+  getOrderList() {
+    // todo
+  }
+
   private findCartItemByVariantId(id: string): CartItem {
     const items: CartItem[] = this.cartItemsSource.getValue();
     let existItem: CartItem = null;

@@ -5,28 +5,70 @@
 <div class="section_mod-f">
   <div class="container">
     <div class="row">
+      <div class="col-12 text-center nothing-to-order" *ngIf="cartState.itemsCount === 0">
+        Nothing to order, <a class="color_primary" routerLink="/pizzas">choose</a> something first!
+      </div>
+    </div>
+
+    <div class="row" *ngIf="cartState.itemsCount > 0">
       <div class="col-md-8">
-        <form class="form-details">
+        <form class="form-details" [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm)" novalidate>
           <section class="section-area">
             <h2 class="ui-title-inner ui-title-inner_mod-a">Order Details</h2>
 
-            <label class="ui-form-label">NAME *</label>
-            <input class="form-control" type="text">
+            <label class="ui-form-label">
+              NAME *
+              <span class="form-control-feedback"
+                    *ngIf="isInvalidAndTouched(checkoutForm.get('name'))">
+                Field is required
+              </span>
+            </label>
+            <input class="form-control"
+                   [class.has-warning]="isInvalidAndTouched(checkoutForm.get('name'))"
+                   type="text"
+                   formControlName="name">
 
-            <label class="ui-form-label">EMAIL ADDRESS *</label>
-            <input class="form-control" type="text">
+            <label class="ui-form-label">
+              EMAIL ADDRESS *
+              <span class="form-control-feedback"
+                    *ngIf="isInvalidAndTouched(checkoutForm.get('email'))">
+                Must contain valid email
+              </span>
+            </label>
+            <input class="form-control"
+                   [class.has-warning]="isInvalidAndTouched(checkoutForm.get('email'))"
+                   type="text"
+                   formControlName="email">
 
-            <label class="ui-form-label">PHONE *</label>
-            <input class="form-control" type="text">
+            <label class="ui-form-label">
+              PHONE *
+              <span class="form-control-feedback"
+                    *ngIf="isInvalidAndTouched(checkoutForm.get('phone'))">
+                Field is required
+              </span>
+            </label>
+            <input class="form-control"
+                   [class.has-warning]="isInvalidAndTouched(checkoutForm.get('phone'))"
+                   type="text"
+                   formControlName="phone">
 
-            <label class="ui-form-label">ADDRESS *</label>
-            <input class="form-control" placeholder="Street address">
-            <input class="form-control" placeholder="Apartment, suite, unit etc. (optional)">
+            <label class="ui-form-label">
+              ADDRESS *
+              <span class="form-control-feedback"
+                    *ngIf="isInvalidAndTouched(checkoutForm.get('address1'))">
+                Field is required
+              </span>
+            </label>
+            <input class="form-control"
+                   [class.has-warning]="isInvalidAndTouched(checkoutForm.get('address1'))"
+                   placeholder="Street address"
+                   formControlName="address1">
+            <input class="form-control" placeholder="Apartment, suite, unit etc. (optional)" formControlName="address2">
 
 
             <label class="ui-form-label">ORDER NOTES</label>
             <textarea class="form-control" name="comment" rows="4"
-                      placeholder="Notes about your order , e.g. special notes for delivery." required=""></textarea>
+                      placeholder="Notes about your order , e.g. special notes for delivery." formControlName="notes"></textarea>
           </section>
           <!-- end section -->
         </form>
@@ -38,37 +80,34 @@
           <section class="section-area">
             <h2 class="table-order__title ui-title-inner">Your Order</h2>
 
-            <div *ngIf="cartState.itemsCount === 0">
-              Nothing to order, <a class="color_primary" routerLink="/pizzas">choose</a> something first!
-            </div>
+            <table class="table-order">
+              <thead>
+              <tr>
+                <th>PRODUCT</th>
+                <th>TOTAL</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let i of cartState.items">
+                <td class="no-br">{{i.pizza.name}} ({{i.pizzaVariant.name}})<span class="color_primary"> x {{i.quantity}}</span>
+                </td>
+                <td>
+                  <span class="table-order__price">${{i.totalPrice}}</span>
+                </td>
+              </tr>
+              </tbody>
+              <tfoot>
+              <tr>
+                <td class="table-order__total">Order Total</td>
+                <td class="table-order__total">${{cartState.itemsPrice}}</td>
+              </tr>
+              </tfoot>
+            </table>
 
-            <div *ngIf="cartState.itemsCount > 0">
-              <table class="table-order">
-                <thead>
-                <tr>
-                  <th>PRODUCT</th>
-                  <th>TOTAL</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor="let i of cartState.items">
-                  <td class="no-br">{{i.pizza.name}} ({{i.pizzaVariant.name}})<span class="color_primary"> x {{i.quantity}}</span>
-                  </td>
-                  <td>
-                    <span class="table-order__price">${{i.totalPrice}}</span>
-                  </td>
-                </tr>
-                </tbody>
-                <tfoot>
-                <tr>
-                  <td class="table-order__total">Order Total</td>
-                  <td class="table-order__total">${{cartState.itemsPrice}}</td>
-                </tr>
-                </tfoot>
-              </table>
-
-              <button class="ui-btn ui-btn--primary ui-btn--effect ui-btn--full-width">place order</button>
-            </div>
+            <button
+              class="ui-btn ui-btn--primary ui-btn--effect ui-btn--full-width"
+              (click)="onSubmit(checkoutForm)"
+            >place order</button>
           </section>
           <!-- end section-area -->
         </div>
