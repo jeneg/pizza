@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import {Http} from '@angular/http';
 import {Observable} from 'rxjs';
-import {UtilsService} from './utils.service';
 import 'rxjs/add/operator/map';
-import {Pizza} from './pizza.model';
-import {PizzaVariant} from "./pizza-variant.model";
+
+import {UtilsService} from './utils.service';
+import {Pizza} from '../models/pizza.model';
+import {PizzaVariant} from "../models/pizza-variant.model";
 
 
 

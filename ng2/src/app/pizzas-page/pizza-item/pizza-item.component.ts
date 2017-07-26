@@ -1,6 +1,6 @@
 import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
-import {Pizza} from "../../core/services/pizza.model";
-import {PizzaVariant} from "../../core/services/pizza-variant.model";
+import {Pizza} from "../../core/models/pizza.model";
+import {PizzaVariant} from "../../core/models/pizza-variant.model";
 
 @Component({
   selector: 'pi-pizza-item',

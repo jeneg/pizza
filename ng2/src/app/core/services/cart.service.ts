@@ -3,12 +3,12 @@ import {BehaviorSubject} from "rxjs/BehaviorSubject";
 import {Observable} from "rxjs/Observable";
 import 'rxjs/add/operator/map';
 
-import {PizzaVariant} from "./pizza-variant.model";
-import {Pizza} from "./pizza.model";
 import {PizzasService} from "./pizzas.service";
-import {CartItem} from "./cart-item.model";
-import {CartState} from "./cart-state.model";
-import {OrderItem} from "./order-item.model";
+import {PizzaVariant} from "../models/pizza-variant.model";
+import {Pizza} from "../models/pizza.model";
+import {CartItem} from "../models/cart-item.model";
+import {CartState} from "../models/cart-state.model";
+import {OrderItem} from "../models/order-item.model";
 
 
 @Injectable()

@@ -1,10 +1,10 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {CartService} from "../core/services/cart.service";
-import {CartState} from "../core/services/cart-state.model";
+import {CartState} from "../core/models/cart-state.model";
 import {Subscription} from "rxjs/Subscription";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {OrderService} from "../core/services/order.service";
-import {OrderForm} from "../core/services/order-form.model";
+import {OrderForm} from "../core/models/order-form.model";
 import {Router} from "@angular/router";
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {CheckoutModalComponent} from "./checkout-modal/checkout-modal.component";

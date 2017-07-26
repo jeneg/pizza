@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import {CartService} from "./cart.service";
-import {OrderPayload} from "./order-payload.model";
 import {Http} from "@angular/http";
-import {UtilsService} from "./utils.service";
-import {OrderForm} from "./order-form.model";
 import {Observable} from "rxjs/Observable";
-import 'rxjs/add/operator/map'
+import 'rxjs/add/operator/map';
+
+import {CartService} from "./cart.service";
+import {OrderPayload} from "../models/order-payload.model";
+import {UtilsService} from "./utils.service";
+import {OrderForm} from "../models/order-form.model";
 
 @Injectable()
 export class OrderService {

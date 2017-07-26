@@ -1,7 +1,7 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {CartService} from "../../core/services/cart.service";
 import {Subscription} from "rxjs/Subscription";
-import {CartState} from "../../core/services/cart-state.model";
+import {CartState} from "../../core/models/cart-state.model";
 
 @Component({
   selector: 'pi-header',

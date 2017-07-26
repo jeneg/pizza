@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {PizzasService} from "../core/services/pizzas.service";
-import {Pizza} from "../core/services/pizza.model";
+import {Pizza} from "../core/models/pizza.model";
 import {CartService} from "../core/services/cart.service";
-import {PizzaVariant} from "../core/services/pizza-variant.model";
+import {PizzaVariant} from "../core/models/pizza-variant.model";
 
 @Component({
   selector: 'pi-pizzas-page',
