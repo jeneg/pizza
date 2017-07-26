@@ -78,11 +78,15 @@ export class CartService {
     }
   }
 
+  emptyCart() {
+    this.cartItemsSource.next([]);
+  }
+
   getOrderList(): OrderItem[] {
     const items: CartItem[] = this.cartItemsSource.getValue();
 
     return items.map(i => {
-      return <OrderItem>{variantId: i.pizzaVariant.id, quantity: i.quantity}
+      return <OrderItem>{pizzaVariantId: i.pizzaVariant.id, quantity: i.quantity}
     })
   }
 

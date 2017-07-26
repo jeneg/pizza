@@ -1,4 +1,4 @@
 export class OrderItem {
-  variantId: string;
+  pizzaVariantId: string;
   quantity: number;
 }

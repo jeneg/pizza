@@ -4,6 +4,7 @@ import {RouterModule} from "@angular/router";
 import {CheckoutComponent} from "app/checkout/checkout.component";
 import {SharedModule} from "../shared/shared.module";
 import {ReactiveFormsModule} from "@angular/forms";
+import { CheckoutModalComponent } from './checkout-modal/checkout-modal.component';
 
 const checkoutRouting: ModuleWithProviders = RouterModule.forChild([{
   path: 'checkout',
@@ -18,6 +19,12 @@ const checkoutRouting: ModuleWithProviders = RouterModule.forChild([{
     SharedModule,
     ReactiveFormsModule
   ],
-  declarations: [CheckoutComponent]
+  declarations: [
+    CheckoutComponent,
+    CheckoutModalComponent
+  ],
+  entryComponents: [
+    CheckoutModalComponent
+  ]
 })
 export class CheckoutModule { }

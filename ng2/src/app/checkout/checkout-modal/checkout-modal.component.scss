@@ -1,0 +1,23 @@
+/deep/ .dark-modal  {
+  .modal-header,
+  .modal-footer {
+    border-color: rgba(255,255,255,.1);
+  }
+
+  .modal-content {
+    background: #000;
+    color: #fff;
+    border-radius: 0;
+    border: 1px solid #D94F2B;
+  }
+
+  .modal-title {
+    font: 30px 'Fredericka the Great';
+    text-align: center;
+    color: #D94F2B;
+  }
+
+  .modal-body {
+    font-size: 22px;
+  }
+}

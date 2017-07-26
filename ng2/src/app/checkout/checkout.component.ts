@@ -5,6 +5,10 @@ import {Subscription} from "rxjs/Subscription";
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import {OrderService} from "../core/services/order.service";
 import {OrderForm} from "../core/services/order-form.model";
+import {Router} from "@angular/router";
+import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
+import {CheckoutModalComponent} from "./checkout-modal/checkout-modal.component";
+import 'rxjs/add/operator/finally'
 
 @Component({
   selector: 'pi-checkout',
@@ -12,6 +16,7 @@ import {OrderForm} from "../core/services/order-form.model";
   styleUrls: ['./checkout.component.scss']
 })
 export class CheckoutComponent implements OnInit, OnDestroy {
+  isLoading: boolean;
   cartState: CartState;
   checkoutForm: FormGroup;
 
@@ -20,7 +25,9 @@ export class CheckoutComponent implements OnInit, OnDestroy {
   constructor(
     private cart: CartService,
     private fb: FormBuilder,
-    private order: OrderService
+    private order: OrderService,
+    private router: Router,
+    private modal: NgbModal
   ) { }
 
   ngOnInit() {
@@ -48,7 +55,17 @@ export class CheckoutComponent implements OnInit, OnDestroy {
 
   onSubmit(form: FormGroup): void {
     if (form.valid) {
-      this.order.makeOrder(<OrderForm>this.checkoutForm.value);
+      this.isLoading = true;
+
+      this.order.makeOrder(<OrderForm>this.checkoutForm.value)
+        .finally(() => this.isLoading = false)
+        .subscribe(res => {
+          this.modal.open(CheckoutModalComponent, {windowClass: 'dark-modal'}).result
+            .then(() => {
+              this.cart.emptyCart();
+              this.router.navigate(['/']);
+            })
+        })
 
     } else {
       for (let c in form.controls) {
