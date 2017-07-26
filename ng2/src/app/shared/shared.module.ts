@@ -6,11 +6,13 @@ import {HttpModule} from '@angular/http';
 import { ButtonComponent } from './button/button.component';
 import { CartTotalComponent } from './cart-total/cart-total.component';
 import { FooterComponent } from './footer/footer.component';
+import {RouterModule} from "@angular/router";
 
 @NgModule({
   imports: [
     CommonModule,
-    HttpModule
+    HttpModule,
+    RouterModule
   ],
   exports: [
     HeaderComponent,
