@@ -4,6 +4,7 @@ import {PizzasService} from './services/pizzas.service';
 import {UtilsService} from './services/utils.service';
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {CartService} from "./services/cart.service";
+import {OrderService} from "./services/order.service";
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import {CartService} from "./services/cart.service";
   providers: [
     PizzasService,
     UtilsService,
-    CartService
+    CartService,
+    OrderService
   ]
 })
 export class CoreModule { }

@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import {BehaviorSubject} from "rxjs/BehaviorSubject";
 import {Observable} from "rxjs/Observable";
+import 'rxjs/add/operator/map';
 
 import {PizzaVariant} from "./pizza-variant.model";
 import {Pizza} from "./pizza.model";
 import {PizzasService} from "./pizzas.service";
 import {CartItem} from "./cart-item.model";
 import {CartState} from "./cart-state.model";
-import 'rxjs/add/operator/map';
+import {OrderItem} from "./order-item.model";
 
 
 @Injectable()
@@ -77,8 +78,12 @@ export class CartService {
     }
   }
 
-  getOrderList() {
-    // todo
+  getOrderList(): OrderItem[] {
+    const items: CartItem[] = this.cartItemsSource.getValue();
+
+    return items.map(i => {
+      return <OrderItem>{variantId: i.pizzaVariant.id, quantity: i.quantity}
+    })
   }
 
   private findCartItemByVariantId(id: string): CartItem {
