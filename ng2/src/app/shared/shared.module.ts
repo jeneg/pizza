@@ -7,6 +7,7 @@ import { ButtonComponent } from './button/button.component';
 import { CartTotalComponent } from './cart-total/cart-total.component';
 import { FooterComponent } from './footer/footer.component';
 import {RouterModule} from "@angular/router";
+import { HeaderEffectsDirective } from './header/header-effects.directive';
 
 @NgModule({
   imports: [
@@ -19,14 +20,16 @@ import {RouterModule} from "@angular/router";
     SectionTitleComponent,
     ButtonComponent,
     CartTotalComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderEffectsDirective
   ],
   declarations: [
     HeaderComponent,
     SectionTitleComponent,
     ButtonComponent,
     CartTotalComponent,
-    FooterComponent
+    FooterComponent,
+    HeaderEffectsDirective
   ]
 })
 export class SharedModule {

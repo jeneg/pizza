@@ -8,6 +8,8 @@
 .header__wrap {
   height: 90px;
   width: 100%;
+  animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 .sb-toggle-left {
@@ -40,3 +42,25 @@
 }
 
 
+:host.sticky .header .header__wrap {
+  left: 0;
+  position: fixed;
+  top: 0;
+  margin-top: 0;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 0px 6px 0px #333;
+  transition: all .3s;
+  opacity: .7;
+  background-color: #000;
+
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+
+  &:hover {
+    opacity: 1;
+
+  }
+}
