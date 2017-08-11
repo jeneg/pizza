@@ -8,6 +8,7 @@ import {PizzasPageModule} from './pizzas-page/pizzas-page.module';
 import {CoreModule} from './core/core.module';
 import {SidebarModule} from "ng-sidebar";
 import {CheckoutModule} from "./checkout/checkout.module";
+import {PizzaPageModule} from "./pizza-page/pizza-page.module";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {CheckoutModule} from "./checkout/checkout.module";
     CoreModule,
     SharedModule,
     PizzasPageModule,
+    PizzaPageModule,
     CheckoutModule,
     SidebarModule.forRoot()
   ],

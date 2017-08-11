@@ -1,6 +1,6 @@
-<div class="pizza-builder__item">
+<div class="pizza-builder__item" (click)="openDetails(pizza)">
   <div class="pizza-builder__check-img pizza-builder__check-img pizza-builder__check-img_mod-a">
-    <img class="img-responsive center-block" [src]="pizza.images[0]"ß alt="Foto">
+    <img class="img-responsive center-block" [src]="pizza.images[0]" alt="Foto">
   </div>
   <div class="pizza-builder__check-name">{{pizza.name}}</div>
   <div class="pizza-builder__check-description pizza-builder__check-description_mod-a">{{ingredientsList()}}</div>

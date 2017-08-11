@@ -1,0 +1,100 @@
+<pi-section-title>
+</pi-section-title>
+
+<div class="container" *ngIf="pizza">
+  <div class="row">
+    <div class="col-12">
+      <div class="cart__link-wrap"><a class="cart__link-prev" routerLink="/pizzas"><i
+        class="icon fa fa-chevron-left"></i>back to menu</a></div>
+
+      <div class="slider-cart">
+
+        <div class="slider-cart__item">
+          <section class="cart row">
+            <div class="col-md-6">
+              <img class="img-responsive" [src]="pizza?.images[0]" height="541" width="544"
+                   alt="Foto">
+            </div>
+            <div class="col-md-6">
+              <h2 class="cart__title ui-title-block">{{pizza?.name}}</h2>
+
+              <ngb-rating
+                class="rating"
+                [max]="5"
+                [(rate)]="pizza.rating"
+                (rateChange)="onRateChange()">
+                <ng-template let-fill="fill">
+                  <i class="rating-star icon fa fa-star{{fill === 0 ? '-o': ''}}"></i>
+                </ng-template>
+              </ngb-rating>
+
+              <div class="cart__description">{{pizza.ingredientsList}}</div>
+
+              <div class="cart__group">
+                <div class="cart__title-inner">Available Sizes</div>
+                <input class="cart__radio hidden" id="pizza-size_9" type="radio" name="pizza-size" value="9">
+                <label class="cart__radio-label" for="pizza-size_9">
+                  <span class="cart__radio-number cart__radio-number_9"><span class="cart__radio-inner">9’’</span></span>
+                  <span class="cart__radio-title">Small</span>
+                </label>
+
+                <input class="cart__radio hidden" id="pizza-size_12" type="radio" name="pizza-size" value="12"
+                       checked="">
+                <label class="cart__radio-label" for="pizza-size_12">
+                        <span class="cart__radio-number cart__radio-number_12"><span
+                          class="cart__radio-inner">12’’</span></span>
+                  <span class="cart__radio-title">Medium</span>
+                </label>
+
+                <input class="cart__radio hidden" id="pizza-size_14" type="radio" name="pizza-size" value="14">
+                <label class="cart__radio-label" for="pizza-size_14">
+                        <span class="cart__radio-number cart__radio-number_14"><span
+                          class="cart__radio-inner">14’’</span></span>
+                  <span class="cart__radio-title">Large</span>
+                </label>
+
+                <input class="cart__radio hidden" id="pizza-size_16" type="radio" name="pizza-size" value="16">
+                <label class="cart__radio-label" for="pizza-size_16">
+                        <span class="cart__radio-number cart__radio-number_16"><span
+                          class="cart__radio-inner">16’’</span></span>
+                  <span class="cart__radio-title">Jumbo</span>
+                </label>
+
+                <input class="cart__radio hidden" id="pizza-size_18" type="radio" name="pizza-size" value="18">
+                <label class="cart__radio-label" for="pizza-size_18">
+                        <span class="cart__radio-number cart__radio-number_18"><span
+                          class="cart__radio-inner">18’’</span></span>
+                  <span class="cart__radio-title">Party Size</span>
+                </label>
+                <div class="cart__price">Price: $21</div>
+              </div>
+              <!-- end cart__group -->
+
+              <div class="cart__group">
+                <div class="cart__title-inner">quantity</div>
+                <div class="cart__enumerator">
+                  <a class="cart__enumerator-btn cart__enumerator-btn_minus js-minus">-</a>
+                  <input class="cart__enumerator-input" type="text" placeholder="1">
+                  <a class="cart__enumerator-btn cart__enumerator-btn_plus js-plus">+</a>
+                </div>
+                <a class="cart__btn ui-btn ui-btn-primary btn-effect" href="javascript:void(0);">add to cart</a>
+              </div>
+              <!-- end cart__group -->
+            </div>
+          </section>
+        </div>
+
+
+
+        <div class="owl-controls clickable">
+          <div class="owl-buttons">
+            <div class="owl-prev"><i></i></div>
+            <div class="owl-next"><i></i></div>
+          </div>
+        </div>
+      </div>
+      <!-- end slider-cart -->
+    </div>
+
+  </div>
+</div>

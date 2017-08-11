@@ -10,8 +10,6 @@ export class Pizza {
   variants: PizzaVariant[];
   ingredients: Ingredient[];
   images: string[];
-
-  get ingredientsList() {
-    return this.ingredients.map(i => i.name).join(', ');
-  }
+  rating: number;
+  ingredientsList?: string;
 }

@@ -1,6 +1,7 @@
 import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import {Pizza} from "../../core/models/pizza.model";
 import {PizzaVariant} from "../../core/models/pizza-variant.model";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'pi-pizza-item',
@@ -13,8 +14,9 @@ export class PizzaItemComponent implements OnInit {
 
   selectedVariant: PizzaVariant;
 
-  constructor() {
-  }
+  constructor(
+    private router: Router
+  ) {}
 
   ngOnInit() {
     this.selectedVariant = this.pizza.variants && this.pizza.variants[0];
@@ -30,5 +32,9 @@ export class PizzaItemComponent implements OnInit {
 
   onAdd() {
     this.addedPizza.emit(this.selectedVariant);
+  }
+
+  openDetails(pizza: Pizza) {
+    this.router.navigate(['pizza', pizza.slug]);
   }
 }

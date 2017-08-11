@@ -11,7 +11,7 @@ import {PizzaVariant} from "../models/pizza-variant.model";
 
 @Injectable()
 export class PizzasService {
-  private pizzas: Pizza[];
+  private pizzas: Pizza[] = [];
 
   constructor(
     private http: Http,
@@ -24,18 +24,7 @@ export class PizzasService {
       .map((data) => {
         let pizzas = <Pizza[]>data.data;
 
-        pizzas.forEach(p => {
-          if (Array.isArray(p.variants)) {
-            p.variants.sort((a: PizzaVariant, b: PizzaVariant) => {
-              return this.utils.localeCompare(a.name, b.name);
-            });
-
-            // todo..
-            p.variants.forEach(v => {
-              v.price = Math.ceil(v.price / 100 / 27);
-            })
-          }
-        });
+        pizzas.forEach(this.processPizza.bind(this));
 
         this.pizzas = pizzas;
 
@@ -54,5 +43,32 @@ export class PizzasService {
     });
 
     return foundPizza;
+  }
+
+  getPizzaBySlug(slug: string): Observable<Pizza> {
+    return this.http.get(this.utils.getApiUrl(`pizzas/${slug}`))
+      .map((data) => data.json())
+      .map((data) => {
+        let pizza = <Pizza>data.data;
+
+        this.processPizza(pizza);
+
+        return pizza;
+      });
+  }
+
+  private processPizza(pizza: Pizza) {
+    if (Array.isArray(pizza.variants)) {
+      pizza.variants.sort((a: PizzaVariant, b: PizzaVariant) => {
+        return this.utils.localeCompare(a.name, b.name);
+      });
+
+      // todo..
+      pizza.variants.forEach(v => {
+        v.price = Math.ceil(v.price / 100 / 27);
+      });
+
+      pizza.ingredientsList = pizza.ingredients.map(i => i.name).join(', ');
+    }
   }
 }
