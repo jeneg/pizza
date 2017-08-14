@@ -7,26 +7,31 @@ import { CartTotalComponent } from './cart-total/cart-total.component';
 import { FooterComponent } from './footer/footer.component';
 import {RouterModule} from "@angular/router";
 import { HeaderEffectsDirective } from './header/header-effects.directive';
+import { QuantitySelectorComponent } from './quantity-selector/quantity-selector.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   imports: [
     CommonModule,
     HttpModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,
     SectionTitleComponent,
     CartTotalComponent,
     FooterComponent,
-    HeaderEffectsDirective
+    HeaderEffectsDirective,
+    QuantitySelectorComponent
   ],
   declarations: [
     HeaderComponent,
     SectionTitleComponent,
     CartTotalComponent,
     FooterComponent,
-    HeaderEffectsDirective
+    HeaderEffectsDirective,
+    QuantitySelectorComponent
   ]
 })
 export class SharedModule {

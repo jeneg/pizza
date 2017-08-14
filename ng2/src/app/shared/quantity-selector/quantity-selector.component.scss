@@ -1,0 +1,47 @@
+.cart__enumerator {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.cart__enumerator-input {
+  width: 44px;
+  height: 44px;
+  margin-right: -6px;
+  margin-left: -5px;
+  vertical-align: bottom;
+  border: 1px solid #fff;
+  background-color: transparent;
+  text-align: center;
+  color: #fff;
+}
+
+.cart__enumerator-btn {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  font-size: 26px;
+  color: #fff;
+  border: 1px solid #fff;
+  cursor: pointer;
+  text-align: center;
+  background: none;
+
+  &:hover {
+    text-decoration: none;
+    color: #9c361c;
+  }
+}
+
+
+.cart__enumerator-input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.cart__enumerator-input::-moz-placeholder {
+  color: #fff;
+}
+
+.cart__btn {
+  margin-bottom: 0;
+  vertical-align: top;
+}
