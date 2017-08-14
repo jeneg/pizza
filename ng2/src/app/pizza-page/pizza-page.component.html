@@ -72,25 +72,14 @@
 
               <div class="cart__group">
                 <div class="cart__title-inner">quantity</div>
-                <div class="cart__enumerator">
-                  <a class="cart__enumerator-btn cart__enumerator-btn_minus js-minus">-</a>
-                  <input class="cart__enumerator-input" type="text" placeholder="1">
-                  <a class="cart__enumerator-btn cart__enumerator-btn_plus js-plus">+</a>
-                </div>
-                <a class="cart__btn ui-btn ui-btn-primary btn-effect" href="javascript:void(0);">add to cart</a>
+
+                <pi-quantity-selector [(count)]="count"></pi-quantity-selector>
+
+                <button class="ui-btn ui-btn--primary ui-btn--effect">add to cart</button>
               </div>
               <!-- end cart__group -->
             </div>
           </section>
-        </div>
-
-
-
-        <div class="owl-controls clickable">
-          <div class="owl-buttons">
-            <div class="owl-prev"><i></i></div>
-            <div class="owl-next"><i></i></div>
-          </div>
         </div>
       </div>
       <!-- end slider-cart -->

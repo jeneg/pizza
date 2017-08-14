@@ -10,6 +10,7 @@ import {Pizza} from "../core/models/pizza.model";
 })
 export class PizzaPageComponent implements OnInit {
   pizza: Pizza;
+  count: number = 1;
 
   constructor(private pizzas: PizzasService,
               private route: ActivatedRoute) {
