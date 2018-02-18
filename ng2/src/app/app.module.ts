@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {SharedModule} from './shared/shared.module';
-import {PizzasPageModule} from './pizzas-page/pizzas-page.module';
-import {CoreModule} from './core/core.module';
+import {SharedModule} from '../../../ng/src/app/shared/shared.module';
+import {PizzasPageModule} from '../../../ng/src/app/pizzas-page/pizzas-page.module';
+import {CoreModule} from '../../../ng/src/app/core/core.module';
 import {SidebarModule} from "ng-sidebar";
-import {CheckoutModule} from "./checkout/checkout.module";
-import {PizzaPageModule} from "./pizza-page/pizza-page.module";
+import {CheckoutModule} from "../../../ng/src/app/checkout/checkout.module";
+import {PizzaPageModule} from "../../../ng/src/app/pizza-page/pizza-page.module";
 
 @NgModule({
   declarations: [
